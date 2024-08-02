@@ -3,5 +3,5 @@
  * @returns {Promise<Response>}
  */
 export function getYyWord() {
-    return fetch('https://v1.hitokoto.cn?c=d&c=h&c=k&c=j')
+    return fetch('https://v1.hitokoto.cn?c=d&c=h&c=k&c=j&encode=json&charset=utf-8')
 }

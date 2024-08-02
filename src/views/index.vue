@@ -114,13 +114,16 @@ export default {
       this.currentLinks = links;
     },
     loadBackgroundUrlArr() {
-      let files = require.context("@/assets/pic/search", true, /\.webp$/).keys();
-      if (files.length > 0) {
-        this.backgroundUrlArr = []
-        for (let filePath of files) {
-          this.backgroundUrlArr.push(require(`@/assets/pic/search/${filePath.slice(2)}`))
-        }
-      }
+      //本地
+      // let files = require.context("@/assets/pic/search", true, /\.webp$/).keys();
+      // if (files.length > 0) {
+      //   this.backgroundUrlArr = []
+      //   for (let filePath of files) {
+      //     this.backgroundUrlArr.push(require(`@/assets/pic/search/${filePath.slice(2)}`))
+      //   }
+      // }
+      //在线随机获取必应历史
+      this.backgroundUrlArr.push("https://bing.img.run/rand_uhd.php")
     }
   },
   mounted() {
